@@ -72,6 +72,10 @@ h5 {
   margin: 10px 0 40px;
 }
 
+.is-Sticky .workContact{
+	background-color: #fff;
+}
+
 /*Logo*/
 .logo {
   width: 80px;
