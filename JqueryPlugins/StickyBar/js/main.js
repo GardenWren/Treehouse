@@ -17,13 +17,12 @@ $('.header').on('sticky-end', function () {
 });
 
 $('.workContact').sticky({
-	topSpacing: 20
+	topSpacing: 64
 });
 
-$('.workContact').on('sticky-start', function () {
-  $(this).append(<a href="mailto: someone@example.com" class="sticky">Email Us</a>);
-});
+$('.workContact').on('sticky-start', function(){
+  $(this).append("<a href='mailto:someone@example.com' class='emailLink'> Email Us</a>");
+  });
 
 $('.workContact').on('sticky-end', function () {
-  $(".sticky").remove();
-});
+  $('.emailLink').remove();});
