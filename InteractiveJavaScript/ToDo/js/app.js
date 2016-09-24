@@ -51,9 +51,9 @@ console.log('bind list elements');
 	//for each list item
 	
 	//select its children
-	var checkBox = taskListItem.querySelector(input[type=checkbox]);
-	var editButton = taskListItem.querySelector(button .edit);
-	var deleteButton = taskListItem.querySelector(button .delete);
+	var checkBox = taskListItem.querySelector("input[type=checkbox]");
+	var editButton = taskListItem.querySelector("button.edit");
+	var deleteButton = taskListItem.querySelector('button.delete');
 	//bind editTask to edit button
 	editButton.onclick = editTask;
 	//bind deleteTask to delete button
@@ -65,18 +65,18 @@ console.log('bind list elements');
 }
 
 //Set the click handler to the addTask function
-addbutton.onclick = addTask;
+addButton.onclick = addTask;
 
 // cycle over incompleteTaskHolder ul li and bind events to children taskComplete
-for(var i = 0, i < incompleteTaskHolder.length, i++){
-	bindTaskEvents(incompleteTaskHolder.children[i],taskComplete)
+for(var i = 0; i < incompleteTaskHolder.children.length; i++){
+	bindTaskEvent(incompleteTaskHolder.children[i],taskComplete)
 	
 }
 
 //cycle over completeTaskHolder ul li and bind events to children taskIncomplete
 
-for(var i = 0, i < completeTaskHolder.length, i++){
-	bindTaskEvents(completeTaskHolder.children[i],taskIncomplete)
+for(var i = 0; i < completeTaskHolder.children.length; i++){
+	bindTaskEvent(completeTaskHolder.children[i],taskIncomplete)
 	
 }
 
