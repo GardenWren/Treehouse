@@ -7,6 +7,7 @@ var incompleteTaskHolder =document.getElementById('incomplete-tasks');//incomple
 var completeTaskHolderdocument.getElementById('complete-tasks'); //complete tasks
 // Add a new task
 var addTask = function(){
+	console.log('add task');
 	// When the button is pressed
 	// Create new list item from #new-task
 		// Check box 
@@ -35,10 +36,41 @@ var deleteTask = function(){
 
 // Mark a task as complete
 var taskComplete = function(){
-	// when checkbox is checked add #completed-tasks
+	// when checkbox is checked add to #completed-tasks
 }
 // Mark a task as incomplete
 var taskIncomplete = function(){
 	// When the checkbox is checked add to #incomplete-tasks
 }
+var bindTaskEvent = function(taskListItem,checkBoxEventHandler){ 
+console.log('bind list elements');
+	//for each list item
+	
+	//select its children
+	//bind editTask to edit button
+	//bind deleteTask to delete button
+	// bind checkBoxEventHandler
+	
+	
+}
+
+//Set the click handler to the addTask function
+addbutton.onclick = addTask;
+
+// cycle over incompleteTaskHolder ul li and bind events to children taskComplete
+for(var i = 0, i<incompleteTaskHolder, i++){
+	bindTaskEvents(incompleteTaskHolder.children[i],taskComplete)
+	
+}
+
+//cycle over completeTaskHolder ul li and bind events to children taskIncomplete
+
+for(var i = 0, i<incompleteTaskHolder, i++){
+	bindTaskEvents(completeTaskHolder.children[i],taskIncomplete)
+	
+}
+
+
+	
+
 
