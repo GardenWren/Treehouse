@@ -74,4 +74,4 @@ $(document).ready(function(){
 	roomStatusHTML+='</ul>';
 	$('#roomList').html(roomStatusHTML);
 	$.getJSON(roomsurl,roomsResponse);
-}); // end ready
+}); // end of ready
