@@ -16,5 +16,5 @@ xhr.onreadystatechange = function () {
     document.getElementById('employeeList).innerHTML = statusHTML;
    }
 };
-xhr.open('GET', 'data/employees.json');
+xhr.open('GET', 'data/rooms.json');
 xhr.send();
