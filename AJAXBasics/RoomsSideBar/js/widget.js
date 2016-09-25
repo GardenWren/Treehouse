@@ -23,12 +23,12 @@ var roomsxhr = new XMLHttpRequest();
 roomsxhr.onreadystatechange = function () {
   if(roomsxhr.readyState === 4 && roomsxhr.status === 200) {
     var rooms= JSON.parse(roomsxhr.responseText);
-    var statusHTML = '<ul class="bulleted">';
+    var statusHTML = '<ul class="rooms">';
     for (var i=0; i<rooms.length; i += 1) {
       if (rooms[i].available === true) {
-        statusHTML += '<li class="in">';
+        statusHTML += '<li class="empty">';
       } else {
-        statusHTML += '<li class="out">';
+        statusHTML += '<li class="full">';
       }
       statusHTML += rooms[i].room;
       statusHTML += '</li>';
