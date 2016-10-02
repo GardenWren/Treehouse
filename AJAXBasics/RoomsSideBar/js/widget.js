@@ -60,14 +60,14 @@ $(document).ready(function(){
 
 	var roomsurl = "../data/rooms.json;"
 	var roomsResponse = function(response){
-		var roomStatusHTML = '<ul class="bulleted">';
+		var roomStatusHTML = '<ul class="rooms">';
 		$.each(response,function(index, room){
 			if(room.available === true){
 				roomStatusHTML += '<li class="empty">';
 			}else{
 				roomStatusHTML += '<li class="full">';
 			}
-			roomStatusHTML += room.name;
+			roomStatusHTML += room.room;
 			roomStatusHTML += '</li>';
 		}
 	}); // end each
