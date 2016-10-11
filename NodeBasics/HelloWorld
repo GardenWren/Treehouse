@@ -1,4 +1,9 @@
-function helloWorld (){
-console.log("Hello World");
-};
-helloWorld();
+var http = require ('http');
+// tells node we need http
+http.createServer(function(request,response){
+	response.writeHead(200,{'Content-Type':'text/plain'}); //tells browser head is plain text
+	response.end('Hello World\n')
+	
+}).listen(8080);
+
+console.log('server started');
